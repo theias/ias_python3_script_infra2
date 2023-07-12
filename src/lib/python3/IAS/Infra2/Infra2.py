@@ -1,6 +1,6 @@
-from IAS.Infra.Logger import *
-from IAS.Infra.Dispatcher import *
-from IAS.Infra.FullProjectPaths import *
+from IAS.Infra2.Logger import *
+from IAS.Infra2.Dispatcher import *
+from IAS.Infra2.FullProjectPaths import *
 
 from datetime import *
 
@@ -10,7 +10,7 @@ import json
 import getpass
 import pprint
 
-class IASInfra(
+class IASInfra2(
     IASInfraLogger,
     IASInfraDispatcher,
     IASInfraFullProjectPaths,

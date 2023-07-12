@@ -1,7 +1,7 @@
-from IAS.Infra import IASInfra
+from IAS.Infra2 import IASInfra2
 
 # Change "IASApplication" to whatever you want to call your app:
-class IASSampleApplication(IASInfra):
+class IASSampleApplication(IASInfra2):
 
     def setup(self):
         self.log_info("Setting up.")
