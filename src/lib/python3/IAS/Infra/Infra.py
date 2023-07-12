@@ -15,14 +15,14 @@ class IASInfra(
     IASInfraDispatcher,
     IASInfraFullProjectPaths,
 ):
-    def __init__(self, script_name):
+    def __init__(self):
         
         # self.log_to_stderr = False
         
         # pp = pprint.PrettyPrinter(indent=4)
         # pp.pprint(os.environ)
         
-        self.script_name = script_name
+        self.script_name = sys.argv[0]
         
         if 'IASInfra_log_to_stderr' in os.environ:
             if os.environ['IASInfra_log_to_stderr'] != '0':
@@ -32,15 +32,15 @@ class IASInfra(
         else:
             self.log_to_stderr = False
         
-        self.setup_IAS_infra_logging(script_name)
+        self.setup_IAS_infra_logging(self.script_name)
         
-        self.script_file = os.path.basename(script_name)
+        self.script_file = os.path.basename(self.script_name)
         
         self.script_name_without_extension, self.script_extension = os.path.splitext(self.script_file)
         self.paths={}
         
-        self.paths['real_bin'] = os.path.dirname(os.path.abspath(os.path.realpath(script_name)))
-        self.paths['bin'] = os.path.dirname(os.path.abspath(script_name))
+        self.paths['real_bin'] = os.path.dirname(os.path.abspath(os.path.realpath(self.script_name)))
+        self.paths['bin'] = os.path.dirname(os.path.abspath(self.script_name))
     
         self.default_bin_whence = 'real_bin'
 

@@ -1,3 +1,8 @@
+ias-python3-script-infra2 0.0.1-0 noarch; urgency=low
+
+	* Forking to a new library, with the potential goal of being
+	  compatible with pyinstaller.org
+
 ias-python3-script-infra 2.0.0-0 noarch; urgency=low
 
 	* Reorganized to have a better library layout
