@@ -14,7 +14,7 @@ Infrastructure Design: Martin VanWinkle, Institute for Advanced Study
 import os
 import sys
 
-# sys.path.append('/opt/IAS/lib/python3')
+sys.path.append('/opt/IAS/lib/python3')
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '../lib/python3'))) # pylint: disable=line-too-long
 
 # pylint: disable=wrong-import-position
