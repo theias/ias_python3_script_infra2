@@ -12,11 +12,11 @@ Infrastructure Design: Martin VanWinkle, Institute for Advanced Study
 import os
 import sys
 
-sys.path.insert(0, '/opt/IAS/lib/python3')
+sys.path.append('/opt/IAS/lib/python3')
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '../lib/python3'))) # pylint: disable=line-too-long
 
 # pylint: disable=wrong-import-position
-from IAS.Infra2 import IASInfra2
+from ias.infra2.infra2 import IASInfra2
 
 # Change "IASApplication" to whatever you want to call your app:
 class IASApplication(IASInfra2):
