@@ -1,6 +1,6 @@
-from IAS.Infra2.Logger import *
-from IAS.Infra2.Dispatcher import *
-from IAS.Infra2.FullProjectPaths import *
+from ias.infra2.logger import *
+from ias.infra2.dispatcher import *
+from ias.infra2.fullProjectPaths import *
 
 from datetime import *
 

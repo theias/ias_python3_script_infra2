@@ -1,4 +1,4 @@
-from IAS.Infra2.Syslog import *
+from ias.infra2.Syslog import *
 
 class IASInfraLogger(
     IASInfraSyslog

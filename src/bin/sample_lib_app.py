@@ -18,7 +18,7 @@ sys.path.insert(0, '/opt/IAS/lib/python3')
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '../lib/python3'))) # pylint: disable=line-too-long
 
 # pylint: disable=wrong-import-position
-from IAS.Infra2.SampleApplication import IASSampleApplication
+from ias.infra2.SampleApplication import IASSampleApplication
 
 APP = IASSampleApplication()
 # Set the environment variable, IASInfra_log_to_stderr, to something non-zero
