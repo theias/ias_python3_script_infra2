@@ -1,3 +1,9 @@
+ias-python3-script-infra2 1.0.0-0 noarch; urgency=low
+
+	* Ready for a 1. release
+
+ -- Martin VanWinkle (mvanwinkle@ias.edu) Wed, 04 Jun 2025 12:38:42 -0400
+
 ias-python3-script-infra2 0.0.1-0 noarch; urgency=low
 
 	* Forking to a new library, with the potential goal of being

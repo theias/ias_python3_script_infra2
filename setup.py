@@ -43,7 +43,7 @@ with open("README.md", "r") as fh:
 
 setup_args = {
     'name' : "ias-python3-script-infra2-mvanwinkleias", # Replace with your own username
-    'version' : "0.0.1",
+    'version' : "1.0.0",
     'author' : "Example Author",
     'author_email' : "author@example.com",
     'description' : "A small example package",
