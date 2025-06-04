@@ -1,4 +1,4 @@
-from IAS.Infra2 import IASInfra2
+from ias.infra2.infra2 import IASInfra2
 
 # Change "IASApplication" to whatever you want to call your app:
 class IASSampleApplication(IASInfra2):

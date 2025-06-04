@@ -61,6 +61,16 @@ class IASInfra2(
         return False
         # print("Maybe src dir: " + maybe_src_dir)
 
+    def are_we_in_local_bin(self):
+        self.script_path_components = self.paths[self.bin_whence].split('/')
+        # print(self.script_path_components[-1])
+        # print(self.script_path_components[-2])
+
+        if ( self.script_path_components[-1] == 'bin'
+             and self.script_path_components[-2] == '.local') :
+            return True
+        return False
+
     def log_debug_variables(self):
         self.log_debug("************ Debugging variables")
         self.log_debug("Script name without extension: " + self.script_name_without_extension);

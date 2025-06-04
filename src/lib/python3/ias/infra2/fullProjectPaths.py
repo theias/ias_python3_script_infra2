@@ -1,10 +1,13 @@
 import os
+import pprint
 
 class IASInfraFullProjectPaths:
     def do_base_path_calculations(self):
         if self.are_we_in_src():
             self.up_path_components=['..']
             self.project_name=self.script_path_components[-3]
+        elif self.are_we_in_local_bin():
+            self.up_path_components=['..']
         else:
             self.installed_package_name=self.script_path_components[-1]
             self.up_path_components=['..','..']
@@ -16,13 +19,20 @@ class IASInfraFullProjectPaths:
             join_args = [self.paths[self.bin_whence]]
             join_args.extend(self.up_path_components)
             join_args.append(dir_name)
+            # print("src...")
             return os.sep.join(join_args)
-
+        elif self.are_we_in_local_bin():
+            join_args = [self.paths[self.bin_whence]]
+            join_args.extend(self.up_path_components)
+            join_args.append(dir_name)
+            # print("local")
+            return os.sep.join(join_args)
         else:
             join_args = [self.paths[self.bin_whence]]
             join_args.extend(self.up_path_components)
             join_args.append(dir_name)
             join_args.append(self.installed_package_name)
+            # print("installed")
 
             return os.sep.join(join_args)
 
