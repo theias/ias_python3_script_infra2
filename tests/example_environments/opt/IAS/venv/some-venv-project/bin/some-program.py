@@ -2,8 +2,11 @@
 
 import sys
 import os
+import pprint
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(sys.argv[0])), '../../../../../../../lib/python3'))) # pylint: disable=line-too-long
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(sys.argv[0])), '../../../../../../../src/lib/python3'))) # pylint: disable=line-too-long
+
+pprint.pprint(sys.path)
 
 from ias.infra2.infra2 import IASInfra2
 

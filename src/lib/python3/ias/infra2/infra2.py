@@ -71,6 +71,14 @@ class IASInfra2(
             return True
         return False
 
+    def are_we_in_ias_venv(self):
+        # print("VENV")
+        self.script_path_components = self.paths[self.bin_whence].split('/')
+        if (self.script_path_components[-1] == 'bin'
+            and self.script_path_components[-3] == 'venv'):
+            return True
+        return False
+
     def log_debug_variables(self):
         self.log_debug("************ Debugging variables")
         self.log_debug("Script name without extension: " + self.script_name_without_extension);

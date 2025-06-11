@@ -8,6 +8,9 @@ class IASInfraFullProjectPaths:
             self.project_name=self.script_path_components[-3]
         elif self.are_we_in_local_bin():
             self.up_path_components=['..']
+        elif self.are_we_in_ias_venv():
+            self.up_path_components=['..','..','..']
+            self.installed_package_name=self.script_path_components[-2]
         else:
             self.installed_package_name=self.script_path_components[-1]
             self.up_path_components=['..','..']
