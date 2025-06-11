@@ -1,3 +1,9 @@
+ias-python3-script-infra2 1.1.0-0 noarch; urgency=low
+
+	* Added a layout for /opt/IAS/venv
+
+ -- Martin VanWinkle (mvanwinkle@ias.edu) Wed, 11 Jun 2025 15:53:30 -0400
+
 ias-python3-script-infra2 1.0.0-0 noarch; urgency=low
 
 	* Ready for a 1. release
